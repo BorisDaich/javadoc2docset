@@ -22,6 +22,9 @@
 		<maven.compiler.debuglevel>lines,vars,source</maven.compiler.debuglevel>
 		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 		<maven.build.skipTests>true</maven.build.skipTests>
+
+		<version.log4j>2.17.0</version.log4j>
+		<version.lombok>1.18.22</version.lombok>
 	</properties>
 
 	<developers>
@@ -68,22 +71,33 @@
 			<version>3.5</version>
 		</dependency>
 
+		<!-- CODDING PRODUCTIVITY -->
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>RELEASE</version>
+			<version>${version.lombok}</version>
+			<scope>provided</scope>
 		</dependency>
+
+		<!-- END of CODDING PRODUCTIVITY -->
+
+		<!-- LOGGING -->
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
-			<version>2.7</version>
+			<version>${version.log4j}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>2.7</version>
+			<version>${version.log4j}</version>
 		</dependency>
+
+
+		<!-- END of LOGGING  -->
 
 		<!-- SWING GUI DEPENDENCIES -->
 
@@ -140,7 +154,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>1.4.2.RELEASE</version>
+				<version>2.5.8</version>
 				<configuration>
 					<mainClass>${mainClass}</mainClass>
 					<layout>JAR</layout>
